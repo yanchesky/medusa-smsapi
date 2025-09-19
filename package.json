@@ -1,0 +1,97 @@
+{
+  "name": "@yanchesky/medusa-smsapi",
+  "version": "0.0.1",
+  "description": "A Medusa plugin for sending SMS via SMSAPI.",
+  "author": "Janek Biardzki",
+  "license": "MIT",
+  "files": [
+    ".medusa/server"
+  ],
+  "main": "./.medusa/server/src/index.js",
+  "types": "./.medusa/server/src/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    "./providers/*": {
+      "default": "./.medusa/server/src/providers/*/index.js",
+      "types": "./.medusa/server/src/providers/*/index.d.ts"
+    },
+    ".": {
+      "default": "./.medusa/server/src/index.js",
+      "types": "./.medusa/server/src/index.d.ts"
+    }
+  },
+  "keywords": [
+    "medusa",
+    "medusa-plugin",
+    "medusa-v2",
+    "medusa-plugin-integration",
+    "medusa-plugin-notification",
+    "sms",
+    "smsapi",
+    "ecommerce",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanchesky/medusa-smsapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yanchesky/medusa-smsapi/issues"
+  },
+  "homepage": "https://github.com/yanchesky/medusa-smsapi#readme",
+  "scripts": {
+    "build": "medusa plugin:build",
+    "dev": "medusa plugin:develop",
+    "prepublishOnly": "medusa plugin:build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@medusajs/admin-sdk": "2.4.0",
+    "@medusajs/cli": "2.4.0",
+    "@medusajs/framework": "2.4.0",
+    "@medusajs/icons": "2.4.0",
+    "@medusajs/medusa": "2.4.0",
+    "@medusajs/test-utils": "2.4.0",
+    "@medusajs/ui": "4.0.4",
+    "@mikro-orm/cli": "6.4.3",
+    "@mikro-orm/core": "6.4.3",
+    "@mikro-orm/knex": "6.4.3",
+    "@mikro-orm/migrations": "6.4.3",
+    "@mikro-orm/postgresql": "6.4.3",
+    "@swc/core": "1.5.7",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "awilix": "^8.0.1",
+    "eslint": "^9.35.0",
+    "pg": "^8.13.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.44.0",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "peerDependencies": {
+    "@medusajs/admin-sdk": "2.4.0",
+    "@medusajs/cli": "2.4.0",
+    "@medusajs/framework": "2.4.0",
+    "@medusajs/icons": "2.4.0",
+    "@medusajs/medusa": "2.4.0",
+    "@medusajs/test-utils": "2.4.0",
+    "@medusajs/ui": "4.0.3",
+    "@mikro-orm/cli": "6.4.3",
+    "@mikro-orm/core": "6.4.3",
+    "@mikro-orm/knex": "6.4.3",
+    "@mikro-orm/migrations": "6.4.3",
+    "@mikro-orm/postgresql": "6.4.3",
+    "awilix": "^8.0.1",
+    "pg": "^8.13.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {}
+}
